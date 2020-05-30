@@ -36,30 +36,32 @@ img {
 
 /* Containers */
 
-.header {
-    border-bottom: 1px solid #ECECEC;
-}
+
 
 .section {
-    width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
     padding-top: 94px;
     padding-bottom: 94px;
 
 }
 
-.flex-container {
-    display: flex;
-    align-items: center;
-}
+.page-header {
+    border-bottom: 1px solid #ECECEC;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    }
 
-.flex-container.section {
-    padding-top: 0;
-    padding-bottom: 0;
-}
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    }
+
+    .page-header .container {
+        display: flex;
+    }
 
 /* LOGO */
 .logo {
@@ -68,9 +70,7 @@ img {
     font-size: 26px;
     line-height: 1.2;
 
-    margin-top: 24px;
-    margin-bottom: 25px;
-}
+    }
 
 .logo > .header-logo {
     color: var(--title-text-color);
@@ -126,7 +126,7 @@ img {
     color: var(--main-text-color)
 }
 
-.contacts-link + .contacts-link {
+.contacts li + li {
     margin-left: 50px;
 }
 
@@ -182,21 +182,18 @@ img {
 
 /* Идейные принципы */
 
-.principles-section section {
-    
-    border-bottom: 1px solid #ECECEC;
-    padding-right: 0;
-    padding-left: 0;
-    width: 1170px;
+.prinsiples-section {
+    padding-top: 94px;
+    padding-bottom: 0;
 }
 
-/* .grey-line {
+.bordered {
     border-bottom: 1px solid #ECECEC;
+    padding-bottom: 94px;
     width: 1170px;
-    margin-right: auto;
     margin-left: auto;
-    margin-top: auto;
-} */
+    margin-right: auto;
+}
 
 .principles h3 {
     color: var(--title-text-color);
@@ -212,7 +209,6 @@ img {
     line-height: 1.7;
 
     margin-top: 10px;
-    display: inline-block;
 }
 
 .principles {
@@ -259,8 +255,10 @@ img {
     text-align: center;
 }
 
-.our-team ul {
+.team-card-list {
+    margin-top: 50px;
     display: flex;
+    
 }
 
 .team-card + .team-card {
@@ -281,6 +279,18 @@ img {
     margin-top: 50px;
 }
 
+.prof-container {
+    border-bottom: 1px solid #ECECEC;
+    border-right: 1px solid #ECECEC;
+    border-left: 1px solid #ECECEC;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
 .profession {
     font-size: 16px;
     line-height: 1.2;
@@ -290,28 +300,16 @@ img {
 
 .team-card .social-links {
     margin-top: 16px;
-    margin-bottom: 24px;
 }
 
 .social-links {
-    margin-right: auto;
-    margin-left: auto;
-    
     display: flex;
-}
-
-.social-links a {
-    display: inline-block;
-}
+    justify-content: space-between;
+    }
 
 .social-links li {
-    display: flex;
     width: 44px;
     height: 44px;
-}
-
-.social-links li+li {
-    margin-left: 10px;
 }
 
 
@@ -354,10 +352,6 @@ img {
     
 }
 
-.portfolio li {
-    border: 1px solid #EEEEEE;
-}
-
 .portfolio h2 {
 
     font-weight: 700;
@@ -366,10 +360,7 @@ img {
     letter-spacing: 0.06em;
     color: var(--title-text-color);
 
-    display: inline-block;
-    margin-left: 24px;
-    margin-top: 20px;
-}
+    }
 
 .portfolio li:not(:nth-child(3n+1)) {
     margin-left: 30px;
@@ -379,16 +370,24 @@ img {
     margin-top: 30px;
 }
 
+.project-card {
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 24px;
+}
+
 .description {
     font-size: 16px;
     line-height: 1.9;
     color: var(--main-text-color);
 
-    display: block;
     margin-top: 4px;
-    margin-left: 24px;
-    margin-bottom: 24px;
-}
+    
+    }
 
 .detailed-description {
     color: var(--white-color);
@@ -399,14 +398,13 @@ img {
 
 /* Постоянные клиенты */
 
-.clients ul {
+.clients {
     display: flex;
     margin-top: 50px;
     
 }
 
 .clients li {
-    display: block;
     width: 170px;
     height: 90px;
     
@@ -420,6 +418,8 @@ img {
 
 /* Футер */
 .page-footer {
+    padding-top: 48px;
+    
     background-color: #2F303A;
 }
 
@@ -442,15 +442,15 @@ img {
     color: var(--accent-color);
 }
 
-.page-footer .section {
+
+.page-footer .container {
     width: 1170px;
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 28px;
-    padding-top: 48px;
-    
+        
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -468,10 +468,6 @@ img {
 }
 
 .copyright {
-    display: block;
-    margin-top: 18px;
-    margin-bottom: 21px;
-
     font-size: 12px;
     line-height: 2;
     text-align: center;
@@ -479,6 +475,3 @@ img {
 
 }
 
-.portfolio-main .section {
-
-}
